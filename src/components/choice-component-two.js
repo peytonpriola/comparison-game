@@ -1,14 +1,12 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
-import {player2NameAction} from '../actions/actions'
 
 
-const ChoiceComponent = (props) => {
+const ChoiceComponentTwo = (props) => {
   console.log(props)
-  let [player2Name, setPlayer2Name] = React.useState("")
 return <div>
-              <h2>{props.player1Name} Pick Your Weapon</h2>
+              <h2>{props.player2Name} Pick Your Weapon</h2>
               <div className="card-deck">
               <div className="col-sm-2"></div>
               <div className="col-lg-3">
@@ -39,17 +37,12 @@ return <div>
               </div>
               </div>
               </div>
-              <h4>{props.player1Name} picked {props.weaponChoice}</h4>
-              {console.log(player2Name)}
-              <Link to="/Player2" type="button" className="btn btn btn-dark" >Next</Link>
+              <h4>{props.player2Name} picked {props.weaponChoice}</h4>
+              </div>
+            }
 
-            </div>
+            const mapStateToProps = state => {
+              return state
+            }
 
-
-          }
-
-const mapStateToProps = state => {
-  return state
-}
-
-export default connect(mapStateToProps, {player2NameAction})(ChoiceComponent)
+            export default connect(mapStateToProps)(ChoiceComponentTwo)

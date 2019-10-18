@@ -9,6 +9,9 @@ const player1NameReducer = (player1Name = null, action) => {
 }
 
 const player2NameReducer = (player2Name= null, action) => {
+  if(action.type === "TWO_NAME"){
+    player2Name = action.payload
+  }
   return player2Name
 }
 
