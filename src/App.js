@@ -30,6 +30,7 @@ const pageThree = () => {
   )
 }
 
+// shows front-end displays
 function App() {
   return (
     <div className="App">
